@@ -19,7 +19,7 @@ namespace AptWinForm
         public Form1(int v)
         {
             InitializeComponent();
-            LableChenge.LableToForm = output;
+            TextBoxChenge.TextBoxToForm = output;
 
             button1.Text = "добавить надпись";
             button1.Click += Button1_Click;
@@ -28,7 +28,8 @@ namespace AptWinForm
             button3.Text = "отчистить";
             button3.Click += Button1_Click;
 
-            info.Text = null;
+
+            info.Text = output.Font.Unit.ToString();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -36,16 +37,16 @@ namespace AptWinForm
             switch ((sender as System.Windows.Forms.Button).Name)
             {
                 case "button1":
-                    LableChenge.LableWrite(textBox1.Text);
+                    TextBoxChenge.LableWrite(textBox1.Text);
                     break;
                 case "button2":
-                    LableChenge.LableWriteline(textBox1.Text);
+                    TextBoxChenge.LableWriteline(textBox1.Text);
                     break;
                 case "button3":
-                    LableChenge.LableClear();
+                    TextBoxChenge.LableClear();
                     break;
                 default:
-                    LableChenge.LableWrite(null);
+                    TextBoxChenge.LableWrite(null);
                     break;
 
             }
@@ -55,36 +56,6 @@ namespace AptWinForm
         {
 
         }
-    }
-    class LableChenge
-    {
-        public static Label LableToForm { get; set; }
-
-        public static void LableWriteline(string text)
-        {
-            if (text != null)
-            {
-                LableToForm.Text += $"\n{text}";
-            }
-            else { LableToForm.Text += null; }
-        }
-        public static void LableWrite(string text)
-        {
-
-            if (text != null)
-            {
-                LableToForm.Text += text;
-
-            }
-            else { LableToForm.Text += null; }
-        }
-
-        public static void LableClear()
-        {
-            LableToForm.Text = null;
-        }
-
-
 
     }
 

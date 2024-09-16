@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.output = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.output = new System.Windows.Forms.Label();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
@@ -59,14 +59,18 @@
             // 
             // output
             // 
-            this.output.AutoSize = true;
-            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.output.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.output.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.output.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.output.Location = new System.Drawing.Point(17, 70);
+            this.errorProvider1.SetIconAlignment(this.output, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
+            this.output.Location = new System.Drawing.Point(23, 60);
+            this.output.Multiline = true;
             this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(58, 20);
-            this.output.TabIndex = 4;
-            this.output.Text = "Output";
+            this.output.ReadOnly = true;
+            this.output.Size = new System.Drawing.Size(275, 305);
+            this.output.TabIndex = 10;
+            this.output.Text = "1231321321";
+            this.output.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -137,10 +141,10 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage1.Controls.Add(this.output);
             this.tabPage1.Controls.Add(this.info);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.output);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -157,15 +161,15 @@
             // info
             // 
             this.info.AutoSize = true;
-            this.info.Location = new System.Drawing.Point(15, 381);
+            this.info.Location = new System.Drawing.Point(19, 386);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(60, 24);
+            this.info.Size = new System.Drawing.Size(40, 24);
             this.info.TabIndex = 9;
-            this.info.Text = "label1";
+            this.info.Text = "info";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.Location = new System.Drawing.Point(332, 104);
@@ -177,7 +181,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button2.Location = new System.Drawing.Point(332, 60);
@@ -189,7 +193,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(332, 16);
@@ -230,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(592, 489);
+            this.ClientSize = new System.Drawing.Size(865, 489);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.Color.LavenderBlush;
             this.Name = "Form1";
@@ -248,7 +252,6 @@
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.Windows.Forms.Label output;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.Windows.Forms.TextBox textBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
@@ -263,10 +266,11 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label info;
+        private System.Windows.Forms.TextBox output;
     }
 }
 
