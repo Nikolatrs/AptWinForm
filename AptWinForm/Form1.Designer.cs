@@ -1,6 +1,6 @@
 ﻿namespace AptWinForm
 {
-    partial class Form1
+    partial class Form12
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,223 +29,185 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.output = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Аптека = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Номер = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Сервер = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.РГА = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.info = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker5 = new System.ComponentModel.BackgroundWorker();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.list = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.eventLog1 = new System.Diagnostics.EventLog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.NameAPT = new System.Windows.Forms.TextBox();
+            this.Server = new System.Windows.Forms.TextBox();
+            this.IP = new System.Windows.Forms.TextBox();
+            this.addXML = new System.Windows.Forms.Button();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // output
-            // 
-            this.output.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.output.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.output.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.errorProvider1.SetIconAlignment(this.output, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
-            this.output.Location = new System.Drawing.Point(23, 60);
-            this.output.Multiline = true;
-            this.output.Name = "output";
-            this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(275, 305);
-            this.output.TabIndex = 10;
-            this.output.Text = "1231321321";
-            this.output.UseWaitCursor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(19, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 26);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Enter Text";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // dataGridView1
+            // list
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Аптека,
-            this.Номер,
-            this.Сервер,
-            this.IP,
-            this.РГА});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.errorProvider1.SetIconAlignment(this.dataGridView1, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 383);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // Аптека
-            // 
-            this.Аптека.HeaderText = "APT";
-            this.Аптека.Name = "Аптека";
-            this.Аптека.ReadOnly = true;
-            // 
-            // Номер
-            // 
-            this.Номер.HeaderText = "NUM";
-            this.Номер.Name = "Номер";
-            this.Номер.ReadOnly = true;
-            // 
-            // Сервер
-            // 
-            this.Сервер.HeaderText = "SRV";
-            this.Сервер.Name = "Сервер";
-            this.Сервер.ReadOnly = true;
-            // 
-            // IP
-            // 
-            this.IP.HeaderText = "IP";
-            this.IP.Name = "IP";
-            this.IP.ReadOnly = true;
-            // 
-            // РГА
-            // 
-            this.РГА.HeaderText = "RGA";
-            this.РГА.Name = "РГА";
-            this.РГА.ReadOnly = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Black;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage1.Controls.Add(this.output);
-            this.tabPage1.Controls.Add(this.info);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.errorProvider1.SetIconAlignment(this.tabPage1, System.Windows.Forms.ErrorIconAlignment.TopLeft);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(551, 426);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            // 
-            // info
-            // 
-            this.info.AutoSize = true;
-            this.info.Location = new System.Drawing.Point(19, 386);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(40, 24);
-            this.info.TabIndex = 9;
-            this.info.Text = "info";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(332, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 38);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(332, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 38);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.list.AutoCompleteCustomSource.AddRange(new string[] {
+            "хуй",
+            "пизда",
+            "залупа",
+            "вагина",
+            "хуйник",
+            "пиздун",
+            "ваганыч"});
+            this.list.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.list.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.list.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.list.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.list.Location = new System.Drawing.Point(38, 25);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(169, 30);
+            this.list.TabIndex = 0;
+            this.list.Text = "list";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(332, 16);
+            this.button1.Location = new System.Drawing.Point(38, 101);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 38);
-            this.button1.TabIndex = 6;
+            this.button1.Size = new System.Drawing.Size(169, 37);
+            this.button1.TabIndex = 1;
             this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // label1
             // 
-            this.tabControl1.AllowDrop = true;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(559, 455);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl1.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(35, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Cash register computer";
             // 
-            // tabPage2
+            // eventLog1
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(551, 426);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.eventLog1.SynchronizingObject = this;
             // 
-            // Form1
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(35, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Main computer";
+            // 
+            // NameAPT
+            // 
+            this.NameAPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.NameAPT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NameAPT.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameAPT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.NameAPT.Location = new System.Drawing.Point(38, 202);
+            this.NameAPT.Name = "NameAPT";
+            this.NameAPT.Size = new System.Drawing.Size(169, 30);
+            this.NameAPT.TabIndex = 4;
+            this.NameAPT.Text = "NemeAPT";
+            // 
+            // Server
+            // 
+            this.Server.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.Server.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Server.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Server.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Server.Location = new System.Drawing.Point(38, 262);
+            this.Server.Name = "Server";
+            this.Server.Size = new System.Drawing.Size(169, 30);
+            this.Server.TabIndex = 5;
+            this.Server.Text = "Server";
+            // 
+            // IP
+            // 
+            this.IP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.IP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IP.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.IP.Location = new System.Drawing.Point(38, 320);
+            this.IP.Name = "IP";
+            this.IP.Size = new System.Drawing.Size(169, 30);
+            this.IP.TabIndex = 6;
+            this.IP.Text = "IP";
+            // 
+            // addXML
+            // 
+            this.addXML.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addXML.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addXML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.addXML.Location = new System.Drawing.Point(38, 385);
+            this.addXML.Name = "addXML";
+            this.addXML.Size = new System.Drawing.Size(169, 37);
+            this.addXML.TabIndex = 7;
+            this.addXML.Text = "add";
+            this.addXML.UseVisualStyleBackColor = true;
+            // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Location = new System.Drawing.Point(422, 37);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(236, 397);
+            this.propertyGrid1.TabIndex = 8;
+            // 
+            // reset
+            // 
+            this.reset.BackColor = System.Drawing.Color.Black;
+            this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.reset.Image = global::AptWinForm.Properties.Resources.pngwing_com__1_;
+            this.reset.Location = new System.Drawing.Point(246, 25);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(44, 43);
+            this.reset.TabIndex = 9;
+            this.reset.UseVisualStyleBackColor = false;
+            // 
+            // Form12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(865, 489);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(778, 489);
+            this.Controls.Add(this.reset);
+            this.Controls.Add(this.propertyGrid1);
+            this.Controls.Add(this.addXML);
+            this.Controls.Add(this.IP);
+            this.Controls.Add(this.Server);
+            this.Controls.Add(this.NameAPT);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.list);
             this.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.Name = "Form1";
+            this.Name = "Form12";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,24 +215,20 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.ComponentModel.BackgroundWorker backgroundWorker5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Аптека;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Номер;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Сервер;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn РГА;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox list;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label info;
-        private System.Windows.Forms.TextBox output;
+        private System.Diagnostics.EventLog eventLog1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button addXML;
+        private System.Windows.Forms.TextBox IP;
+        private System.Windows.Forms.TextBox Server;
+        private System.Windows.Forms.TextBox NameAPT;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.Button reset;
     }
 }
 
