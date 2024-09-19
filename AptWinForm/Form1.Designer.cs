@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.backgroundWorker5 = new System.ComponentModel.BackgroundWorker();
-            this.list = new System.Windows.Forms.TextBox();
+            this.EntrAPT = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
@@ -43,9 +38,9 @@
             this.NameAPT = new System.Windows.Forms.TextBox();
             this.Server = new System.Windows.Forms.TextBox();
             this.IP = new System.Windows.Forms.TextBox();
-            this.addXML = new System.Windows.Forms.Button();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.add = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
@@ -54,27 +49,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // list
+            // EntrAPT
             // 
-            this.list.AutoCompleteCustomSource.AddRange(new string[] {
-            "хуй",
-            "пизда",
-            "залупа",
-            "вагина",
-            "хуйник",
-            "пиздун",
-            "ваганыч"});
-            this.list.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.list.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.list.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.list.Location = new System.Drawing.Point(38, 25);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(169, 30);
-            this.list.TabIndex = 0;
-            this.list.Text = "list";
+            this.EntrAPT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.EntrAPT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.EntrAPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.EntrAPT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EntrAPT.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EntrAPT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.EntrAPT.Location = new System.Drawing.Point(38, 25);
+            this.EntrAPT.Name = "EntrAPT";
+            this.EntrAPT.Size = new System.Drawing.Size(169, 30);
+            this.EntrAPT.TabIndex = 0;
+            this.EntrAPT.Text = "EntrAPT";
             // 
             // button1
             // 
@@ -82,11 +69,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(38, 101);
+            this.button1.Location = new System.Drawing.Point(38, 100);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 37);
+            this.button1.Size = new System.Drawing.Size(76, 37);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Sir";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -111,11 +98,11 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(35, 151);
+            this.label2.Location = new System.Drawing.Point(35, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 18);
+            this.label2.Size = new System.Drawing.Size(32, 18);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Main computer";
+            this.label2.Text = "info";
             // 
             // NameAPT
             // 
@@ -153,54 +140,60 @@
             this.IP.TabIndex = 6;
             this.IP.Text = "IP";
             // 
-            // addXML
+            // add
             // 
-            this.addXML.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addXML.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addXML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.addXML.Location = new System.Drawing.Point(38, 385);
-            this.addXML.Name = "addXML";
-            this.addXML.Size = new System.Drawing.Size(169, 37);
-            this.addXML.TabIndex = 7;
-            this.addXML.Text = "add";
-            this.addXML.UseVisualStyleBackColor = true;
-            // 
-            // propertyGrid1
-            // 
-            this.propertyGrid1.Location = new System.Drawing.Point(422, 37);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(236, 397);
-            this.propertyGrid1.TabIndex = 8;
+            this.add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.add.Location = new System.Drawing.Point(38, 385);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(169, 37);
+            this.add.TabIndex = 7;
+            this.add.Text = "add";
+            this.add.UseVisualStyleBackColor = true;
             // 
             // reset
             // 
             this.reset.BackColor = System.Drawing.Color.Black;
-            this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.reset.Image = global::AptWinForm.Properties.Resources.pngwing_com__1_;
-            this.reset.Location = new System.Drawing.Point(246, 25);
+            this.reset.Location = new System.Drawing.Point(231, 18);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(44, 43);
             this.reset.TabIndex = 9;
             this.reset.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(131, 100);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 37);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "DSir";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(778, 489);
+            this.ClientSize = new System.Drawing.Size(849, 489);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.reset);
-            this.Controls.Add(this.propertyGrid1);
-            this.Controls.Add(this.addXML);
+            this.Controls.Add(this.add);
             this.Controls.Add(this.IP);
             this.Controls.Add(this.Server);
             this.Controls.Add(this.NameAPT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.list);
+            this.Controls.Add(this.EntrAPT);
             this.ForeColor = System.Drawing.Color.LavenderBlush;
             this.Name = "Form12";
             this.Text = "Form1";
@@ -218,17 +211,17 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.ComponentModel.BackgroundWorker backgroundWorker5;
-        private System.Windows.Forms.TextBox list;
+        private System.Windows.Forms.TextBox EntrAPT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button addXML;
+        private System.Windows.Forms.Button add;
         private System.Windows.Forms.TextBox IP;
         private System.Windows.Forms.TextBox Server;
         private System.Windows.Forms.TextBox NameAPT;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
         private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.Button button2;
     }
 }
 
